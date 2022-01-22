@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>yes</title>
+<style>
+    .formstyle{
+    margin: auto ;
+    height:1000px;
+    width :650px;
+    text-align: center;
+    }
+    input{
+        height : 50px;
+         width : 190px;
+        background: #F08080;
+       font-size: 40px;
+    }
+    #box{
+        height: 100px;
+        width:575px;
+        background:#00FFFF;
+        border: 5px solid black;
+    }
+    #clc{
+        width:575px;
+        background: green;
+    }
+    #a{
+        text-align: center;
+        font-size: 50px;
+        background:#87CEFA;
+    }
+    #body{
+        background:#FFDEAD ;
+    }
+    #int{
+        text-align: center;
+        font-size: 50px;
+        color:red;
+        background:#87CEFA ;
+    } 
+    #equals{
+        background: white;
+    }
+    #cl{
+        text-align: center;
+        font-size: 40px;
+        background: #FFFFE0;
+        border radius: 3px;
+        padding: 1rem 3rem;
+    }
+</style>
+</head>
+
+<body id="body">
+    <p id="cl"></p>
+    <p id="int"></p>
+<p id="a">Calculator</p>
+<div class="formstyle">
+<form name="form">
+<input type="text"name="answer"id="box"><br></br>
+<input type="button" value=" 1 " onclick="form.answer.value += '1'">
+<input type="button" value=" 2 " onclick="form.answer.value += '2'">
+<input type="button" value=" 3 " onclick="form.answer.value += '3'">
+
+<br></br>
+<input type="button" value=" 4 " onclick="form.answer.value += '4'">
+<input type="button" value=" 5 " onclick="form.answer.value += '5'">
+<input type="button" value=" 6 " onclick="form.answer.value += '6'">
+<br></br>
+<input type="button" value=" 7 " onclick="form.answer.value += '7'">
+<input type="button" value=" 8 " onclick="form.answer.value += '8'">
+<input type="button" value=" 9 " onclick="form.answer.value += '9'">
+<br></br>
+<input type="button" value=" + " onclick="form.answer.value += '+'">
+<input type="button" value=" - " onclick="form.answer.value += '-'">
+<input type="button" value=" *" onclick="form.answer.value += '*'">
+<br></br>
+<input type="button" value=" / " onclick="form.answer.value += '/'">
+<input type="button" value=" 0 " onclick="form.answer.value += '0'">
+<input type="button" id ="equals" value=" = " onclick="form.answer.value = eval(form.answer.value)">
+<br></br>
+<input type="button" value=" Clear" onclick=" form.answer.value = ''" id="clc">
+</form>
+</div>
+<script>
+   let name = prompt('Please input your name')
+   document.getElementById('int').innerHTML=name+" , Use This";
+   let x;
+
+display_ct=() => {
+ x = new Date()
+a=x.getHours()
+b=x.getMinutes()
+c=x.getSeconds()
+if(a>12){
+    a=a-12;
+}
+document.getElementById('cl').innerHTML ="Your current time is " +a+" hrs :"+b+"min :"+c+"sec";
+
+ }
+setInterval(display_ct,1000);
+</script>
+</body>
+</html>
