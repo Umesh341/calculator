@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<title>Umesh Shrestha</title>
+<style>
+#firstcontainer
+{
+text-align : center;
+width: 150px;
+font-size: 100px;
+}
+</style>
+</head>
+<body>
+<h1 id="y" >Time is </h1>
+<div id="firstContainer"class="container">
+</div>
+<script>
+let x;
+
+display_ct=() => {
+ x = new Date()
+a=x.getHours()
+b=x.getMinutes()
+c=x.getSeconds()
+document.getElementById('firstContainer').innerHTML = a+":"+b+":"+c;
+ }
+setInterval(display_ct,1000);
+</script>
+</body>
+</html>
